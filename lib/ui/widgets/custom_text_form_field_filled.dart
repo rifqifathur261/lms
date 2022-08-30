@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lms/shared/theme.dart';
 
-class CustomTextFormField extends StatelessWidget {
+class CustomTextFormFieldFilled extends StatelessWidget {
   final String title;
   final String hintText;
   final bool obsecureText;
 
-  const CustomTextFormField({
+  const CustomTextFormFieldFilled({
     Key? key,
     required this.title,
     required this.hintText,
@@ -29,17 +29,11 @@ class CustomTextFormField extends StatelessWidget {
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               hintText: hintText,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(
-                  defaultRadius,
-                ),
-                borderSide: BorderSide(
-                  color: kPrimaryColor,
-                ),
-              ),
+              disabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none,
+              border: InputBorder.none,
+              errorBorder: InputBorder.none,
+              fillColor: kPrimaryColor,
             ),
           ),
         ],

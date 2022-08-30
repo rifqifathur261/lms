@@ -23,7 +23,7 @@ TextStyle primaryTextStyle = GoogleFonts.manrope(color: kPrimaryColor);
 TextStyle accentTextStyle = GoogleFonts.manrope(color: kAccentColor);
 
 TextStyle titleAppBarTextStyle = GoogleFonts.vollkornSc(
-    color: kWhiteColor, fontSize: 18, fontWeight: regular);
+    color: kPrimaryColor, fontSize: 18, fontWeight: regular);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;

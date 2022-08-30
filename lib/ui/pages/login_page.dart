@@ -45,16 +45,22 @@ class LoginPage extends StatelessWidget {
       }
 
       Widget emailInput() {
-        return CustomTextFormField(
-          title: 'Email Adress',
-          hintText: 'Enter email address',
+        return Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: CustomTextFormField(
+            title: 'Email Adress',
+            hintText: 'Enter email address',
+          ),
         );
       }
 
       Widget passwordInput() {
-        return CustomTextFormField(
-          title: 'Password',
-          hintText: 'Enter password',
+        return Container(
+          margin: EdgeInsets.only(bottom: 20),
+          child: CustomTextFormField(
+            title: 'Password',
+            hintText: 'Enter password',
+          ),
         );
       }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lms/cubit/page_cubit.dart';
-import 'package:lms/ui/pages/LoginPage.dart';
+import 'package:lms/ui/pages/login_page.dart';
 import 'package:lms/ui/pages/main_page.dart';
 import 'package:lms/ui/pages/splash_page.dart';
 

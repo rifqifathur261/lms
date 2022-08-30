@@ -7,6 +7,7 @@ import 'package:lms/ui/pages/kelas_page.dart';
 import 'package:lms/ui/pages/mahasiswa_page.dart';
 import 'package:lms/ui/pages/setting_page.dart';
 import 'package:lms/ui/widgets/custom_button_navigation.dart';
+import 'package:badges/badges.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -70,14 +71,14 @@ class MainPage extends StatelessWidget {
     return BlocBuilder<PageCubit, int>(
       builder: (context, currentIndex) {
         return Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
-            backgroundColor: kPrimaryColor,
+            backgroundColor: kWhiteColor,
             leading: Container(
               padding: EdgeInsets.all(
                 10,
               ),
               child: Image(
-                color: kWhiteColor,
                 image: AssetImage(
                   'assets/logo.png',
                 ),
@@ -86,8 +87,22 @@ class MainPage extends StatelessWidget {
             actions: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(
-                  Icons.notifications_outlined,
+                icon: Badge(
+                  shape: BadgeShape.square,
+                  badgeColor: kAccentColor,
+                  borderRadius: BorderRadius.circular(8),
+                  // badgeContent: Text(
+                  //   '3',
+                  //   style: whiteTextStyle.copyWith(
+                  //     fontSize: 12,
+                  //   ),
+                  // ),
+                  elevation: 0,
+                  child: Icon(
+                    size: 24,
+                    color: kPrimaryColor,
+                    Icons.notifications_outlined,
+                  ),
                 ),
               ),
             ],
@@ -97,6 +112,7 @@ class MainPage extends StatelessWidget {
                 style: titleAppBarTextStyle,
               ),
             ),
+            elevation: 0,
           ),
           backgroundColor: kBackgroundColor,
           body: Stack(
